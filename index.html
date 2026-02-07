@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Weather Dashboard</h1>
+    <div class="controls">
+      <input id="cityInput" type="search" placeholder="Search city (e.g. London)" />
+      <button id="searchBtn">Search</button>
+      <label class="unit-toggle">
+        <input type="checkbox" id="unitToggle" />
+        °F
+      </label>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="current" class="card current-card" aria-live="polite">
+      <div id="currentContent" class="placeholder">Search a city to see the weather</div>
+    </section>
+
+    <section id="forecast" class="card forecast-card">
+      <h2>7-day Forecast</h2>
+      <div id="forecastGrid" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Data from Open-Meteo (no API key). Geocoding via Open-Meteo Geocoding API.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
